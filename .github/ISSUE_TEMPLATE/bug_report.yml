@@ -1,0 +1,84 @@
+name: Hata Bildirimi
+description: Bir hata veya beklenmeyen davranış bildirin
+title: "[BUG] "
+labels: ["bug"]
+assignees: ["tickwarden"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bildirimin için teşekkürler! Lütfen aşağıdaki alanları doldurun.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 🐛 Hata Açıklaması
+      description: Hatayı net ve kısa biçimde açıklayın.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔁 Yeniden Üretme Adımları
+      placeholder: |
+        1. '...' komutunu çalıştır
+        2. '...' ekranına bak
+        3. Hata görülüyor
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Beklenen Davranış
+      description: Ne olmasını bekliyordunuz?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Gerçekleşen Davranış
+      description: Aslında ne oldu?
+    validations:
+      required: true
+
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft Versiyonu
+      placeholder: "örn: 1.21.5"
+    validations:
+      required: true
+
+  - type: input
+    id: macro-version
+    attributes:
+      label: macroEngine-dp Versiyonu
+      placeholder: "örn: v3.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: server-type
+    attributes:
+      label: Sunucu Türü
+      options:
+        - Singleplayer
+        - Multiplayer
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: 📄 Log Çıktısı
+      description: Hata mesajını buraya yapıştırın.
+      render: shell
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 💬 Ek Bilgi
+      description: Varsa ekran görüntüsü veya başka bilgi ekleyin.

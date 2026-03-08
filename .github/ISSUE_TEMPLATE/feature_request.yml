@@ -1,0 +1,53 @@
+name: Özellik İsteği
+description: Yeni bir tutorial veya özellik önerin
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: ["tickwarden"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Önerin için teşekkürler! Lütfen aşağıdaki alanları doldurun.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 💡 Öneri
+      description: Eklemek istediğiniz tutorial veya özelliği kısaca açıklayın.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: module
+    attributes:
+      label: 🎯 Hangi Modül?
+      options:
+        - label: Cooldown
+        - label: Event
+        - label: Math
+        - label: Team
+        - label: Config
+        - label: Player
+        - label: Diğer
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📖 Açıklama
+      description: Bu tutorial/özellik ne yapmalı? Nasıl çalışmalı?
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: 💼 Kullanım Senaryosu
+      description: Bu neden faydalı olur? Hangi durumda kullanılır?
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 🔗 Referanslar
+      description: Benzer örnekler veya bağlantılar varsa ekleyin.
